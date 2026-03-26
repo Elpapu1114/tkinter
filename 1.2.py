@@ -16,13 +16,32 @@ imagenes.append(cancha_img)
 fondo = tk.Label(ventana, image=cancha_img)
 fondo.place(x=0, y=0)
 
+def hacer_movible(widget):
+    def iniciar_mov(event):
+        widget._drag_start_x = event.x
+        widget._drag_start_y = event.y
+
+    def mover(event):
+        x = widget.winfo_x() + event.x - widget._drag_start_x
+        y = widget.winfo_y() + event.y - widget._drag_start_y
+        widget.place(x=x, y=y)
+
+    widget.bind("<Button-1>", iniciar_mov)
+    widget.bind("<B1-Motion>", mover)
+
 def cargar_jugador(ruta, x, y):
     img = Image.open(ruta)
     img = img.resize((100, 106))
+    
+    img = img.rotate(90, expand=True)
+
     img_tk = ImageTk.PhotoImage(img)
     imagenes.append(img_tk)
+
     label = tk.Label(ventana, image=img_tk, bd=0)
     label.place(x=x, y=y)
+
+    hacer_movible(label)
 
 cargar_jugador("assets/courtois.png", 50, 330)
 
