@@ -80,17 +80,17 @@ def cargar_jugador(ruta, x, y):
 
 cargar_jugador("assets/courtois.png", 250, 575)
 
-cargar_jugador("assets/nuno.png", 80, 450)
-cargar_jugador("assets/saliba.png", 200, 450)
-cargar_jugador("assets/gabriel.png", 320, 450)
-cargar_jugador("assets/hakimi.png", 440, 450)
+cargar_jugador("assets/nuno.png", 40, 450)
+cargar_jugador("assets/saliba.png", 180, 450)
+cargar_jugador("assets/gabriel.png", 340, 450)
+cargar_jugador("assets/hakimi.png", 480, 450)
 
-cargar_jugador("assets/pedri.png", 180, 325)
-cargar_jugador("assets/valverde.png", 320, 325)
+cargar_jugador("assets/pedri.png", 160, 325)
+cargar_jugador("assets/valverde.png", 360, 325)
 
-cargar_jugador("assets/mbappe.png", 80, 200)
+cargar_jugador("assets/mbappe.png", 40, 200)
 cargar_jugador("assets/yamal.png", 250, 200)
-cargar_jugador("assets/olise.png", 420, 200)
+cargar_jugador("assets/olise.png", 480, 200)
 
 cargar_jugador("assets/kane.png", 250, 50)
 
